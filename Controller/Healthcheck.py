@@ -7,7 +7,7 @@ api = Api(aplikacja)
 
 class Alive(Resource):
     def get(self):
-        return {'status': 'ok'}
+        return {'status': 'ok'}, 201
 
 
 api.add_resource(Alive, '/hc')
