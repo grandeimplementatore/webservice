@@ -22,7 +22,8 @@ def HealthCheck():
 
 class About(Resource):
     def get(self):
-        return {'Application': 'Webservice'}, 200
+        return {'Application': 'Webservice',
+                'Author': 'Grande'}, 200
 
 
 api.add_resource(About, '/about')
