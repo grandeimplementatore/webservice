@@ -10,13 +10,6 @@ class Headers(Resource):
 
 api.add_resource(Headers, '/')
 
-def Headers():
-    if __name__ == 'Controller.Endpoints':
-        aplikacja.run(debug=True)
-    else:
-        print(__name__)
-
-
 class Alive(Resource):
     def get(self):
         return {'status': 'ok'}, 201
@@ -24,10 +17,17 @@ class Alive(Resource):
 
 api.add_resource(Alive, '/hc')
 
+class About(Resource):
+    def get(self):
+        return {'Application': 'Webservice',
+                'Author': 'Grande'}, 200
 
-def HealthCheck():
+
+api.add_resource(About, '/about')
+
+
+def start():
     if __name__ == 'Controller.Endpoints':
         aplikacja.run(debug=True)
     else:
         print(__name__)
-
