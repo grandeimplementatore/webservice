@@ -7,8 +7,13 @@ api = Api(aplikacja)
 
 class Headers(Resource):
     def get(self):
-        id = request.args.get('id')
-        return {'welcome': 'Witam w moim serwisie' + id}, 201
+        try:
+            id = request.args.get('id')
+            return {'welcome': 'Witam w moim serwisie '+ id}, 201
+        except:
+            return {'welcome': 'Witam w moim serwisie'}, 201
+            id == "OMG"
+
 
 api.add_resource(Headers, '/')
 
