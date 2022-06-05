@@ -11,7 +11,7 @@ class Headers(Resource):
             id = request.args.get('id')
             return {'welcome': 'Witam w moim serwisie bardzo serdecznie... '+ id}, 201
         except:
-            return {'welcome': 'Nie ma parametru'}, 201
+            return {'error': 'Nie ma parametru'}, 400
             id == "OMG"
 
 
