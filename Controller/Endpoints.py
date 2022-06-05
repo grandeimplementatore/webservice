@@ -9,7 +9,7 @@ class Headers(Resource):
     def get(self):
         try:
             id = request.args.get('id')
-            return {'welcome': 'Witam w moim serwisie '+ id}, 201
+            return {'welcome': 'Witam w moim serwisie bardzo serdecznie... '+ id}, 201
         except:
             return {'welcome': 'Witam w moim serwisie'}, 201
             id == "OMG"
