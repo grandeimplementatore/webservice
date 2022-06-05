@@ -22,7 +22,8 @@ api.add_resource(Alive, '/hc')
 class About(Resource):
     def get(self):
         return {'Application': 'Webservice',
-                'Author': 'Grande Implementatore'}, 200
+                'Author': 'Grande Implementatore',
+               'Year': '2022'}, 200
 
 
 api.add_resource(About, '/about')
