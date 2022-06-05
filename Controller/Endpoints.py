@@ -8,7 +8,7 @@ api = Api(aplikacja)
 class Headers(Resource):
     def get(self):
 
-        return {'welcome': 'Witam na stronie'}, 201
+        return {'welcome': 'Witam w moim serwisie'}, 201
 
 api.add_resource(Headers, '/')
 
