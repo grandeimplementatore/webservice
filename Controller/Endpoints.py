@@ -1,11 +1,13 @@
-from flask import Flask
+from flask import Flask, request
 from flask_restful import Resource, Api
+import requests
 
 aplikacja = Flask(__name__)
 api = Api(aplikacja)
 
 class Headers(Resource):
     def get(self):
+
         return {'welcome': 'Witam na stronie'}, 201
 
 api.add_resource(Headers, '/')
